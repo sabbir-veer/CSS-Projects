@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #191825;
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  width: 10rem;
+  aspect-ratio: 1;
+  background-color: #8c79fd;
+  border-radius: 50%;
+  position: relative;
+  animation: ghurek 2s linear infinite reverse;
+}
+
+.loader::before {
+  content: "";
+  width: 9rem;
+  aspect-ratio: 1;
+  background-color: #191825;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader::after {
+  content: "";
+  width: 2rem;
+  aspect-ratio: 1;
+  background-color: #8c79fd;
+  /* box-shadow: #8c79fd 0px 22px 70px 4px; */
+  box-shadow: 0px 0px 47px 38px rgba(141, 121, 253, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: -1rem;
+  left: 4rem;
+}
+
+@keyframes ghurek {
+  100% {
+    rotate: 360deg;
+  }
+}
